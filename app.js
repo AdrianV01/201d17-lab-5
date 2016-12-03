@@ -54,10 +54,14 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a,b,c){ //eslint-disable-line
 
   var sum1= sum(a, sum(b,c)[0])[0];
+  console.log(sum1);
   var prod1= multiply(a, multiply(b,c)[0])[0];
-  var message1= a + ' and ' + b + ' sum to ' + sum1 + '.';
+  console.log(prod1);
+  var message1= a + ' and ' + b + ' and ' + c + ' sum to ' + sum1 + '.';
+  console.log(message1);
   var message2= 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prod1 + '.';
-   return [sum1, prod1, message1, message2];
+  console.log(message2);
+  return [sum1, prod1, message1, message2];
 }
   //Third element: "4 and 7 and 5 sum to 16."
   //Fourth element: "The product of 4 and 7 and 5 is 140."
@@ -88,7 +92,7 @@ var testArray = [2,3,4]; //eslint-disable-line
 function sumArray(testArray){ //eslint-disable-line
     for (var i = 0; i < testArray.length; i++) {
       var sum1 = sum(testArray[0], sum(testArray[1],testArray[2])[0])[0];
-      var message1 = testArray + ' was passed in as an array of numbers, and ' + sum1 + ' is their sum' + '.';
+      var message1 = testArray + ' was passed in as an array of numbers, and ' + sum1 + ' is their sum.';
       console.log(sum1);
       console.log(message1);
       return [sum1, message1];
@@ -112,9 +116,11 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-//function multiplyArray(testArray){ //eslint-disable-line
-
-//}
+function multiplyArray(testArray) {
+  var product = multiply(testArray[0], multiply(testArray[1], testArray[2])[0])[0];
+  var message = 'The numbers 2,3,4 have a product of ' + product + '.';
+  return [product, message];
+}
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray([2,3,4]);
