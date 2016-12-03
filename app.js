@@ -21,26 +21,24 @@ testSum(4, 7);
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
-/* Problem 2
-Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+//Problem 2
+//Write a function called multiply() that takes in two numbers as arguments and returns an array where the first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
-"The product of 5 and 9 is 45."
+//"The product of 5 and 9 is 45."
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
-
+//Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.
 // Write your code here
-function multiply(a,b){ //eslint-disable-line
-  var result = a * b;
-  var message = 'The product of ' + a + ' and ' + b
- + ' is ' + result + '.' ;
-  return [result, message];
+function multiply(a,b) {
+  var product = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+  return [product, message];
 }
+
 
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
-
 /////////////////////////////////////
 /* Problem 3
 Write a function called sumAndMultiply() that takes in three numbers as separate arguments and returns an array where the first element is the sum of those three numbers, the second element is the product of those three numbers,  and the third and fourth elements are strings that EXACTLY follow this example and use the values that were input into the function:
@@ -54,12 +52,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
+
   var sum1= sum(a, sum(b,c)[0])[0];
   var prod1= multiply(a, multiply(b,c)[0])[0];
   var message1= a + ' and ' + b + ' sum to ' + sum1 + '.';
   var message2= 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + prod1 + '.';
-  return [sum1, prod1, message1, message2];
+   return [sum1, prod1, message1, message2];
 }
+  //Third element: "4 and 7 and 5 sum to 16."
+  //Fourth element: "The product of 4 and 7 and 5 is 140."
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
@@ -77,6 +79,10 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
+function sumArray() {
+
+};
+
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
